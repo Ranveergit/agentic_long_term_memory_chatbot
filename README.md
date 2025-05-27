@@ -16,31 +16,7 @@ Supports three intelligent chatbot variants designed for different memory and re
 |--------|-------------|
 | 🤖 **Basic Chatbot** | Tracks session history and user info using SQL. Great for lightweight memory-aware conversations. |
 | 🧠 **Agentic Chatbot v2** | Adds OpenAI **function calling** with long-term SQL memory and fallback logic. |
-| 🧠 **Agentic Chatbot v3** | Introduces **ChromaDB vector memory** and hybrid retrieval (SQL + embeddings). Ideal for deep, semantic memory conversations. |
-
----
-
-## 📁 Project Structure
-
-
-Agentic-LongTerm-Memory/
-├── config/
-│ └── config.yml # Configuration for models, DB, etc.
-├── src/
-│ ├── utils/
-│ │ ├── chat_in_terminal.py # CLI interface
-│ │ ├── chat_in_ui.py # Gradio UI logic
-│ │ ├── basic_chatbot_v1.py # Basic memory chatbot
-│ │ ├── chatbot_agentic_v2.py # Agent with SQL tools
-│ │ ├── chatbot_agentic_v3.py # Agent with ChromaDB support
-│ ├── prepare_sqldb.py # Initializes SQL schema
-│ ├── prepare_vectordb.py # Initializes ChromaDB
-│ ├── check_sqldb.py # SQL DB test script
-│ ├── check_vectordb.py # ChromaDB test script
-│ ├── startfile.py # Launches the Gradio app
-├── requirements.txt
-└── README.md
-
+| 🧠 **Agentic Chatbot v3** | Introduces **ChromaDB vector memory** and hybrid retrieval (SQL + embeddings). Ideal for deep, semantic memory conversations.
 
 ---
 
