@@ -31,12 +31,14 @@ with gr.Blocks() as demo:
     with gr.Tabs():
         with gr.TabItem("Chatbot with Agentic Memory"):
             with gr.Row():
-                chatbot = gr.Chatbot(
-                    [],
-                    elem_id="chatbot",
-                    height=500,
-                    avatar_images=("images/AI_RT.png", "images/openai.png"),
-                )
+               chatbot = gr.Chatbot(
+                   [],
+                   elem_id="chatbot",
+                   height=500,
+                   avatar_images=("../images/user.png", "../images/bot.png"),
+                   type="messages"
+                )                   
+
 
             with gr.Row():
                 input_txt = gr.Textbox(
@@ -70,6 +72,6 @@ with gr.Blocks() as demo:
             )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=7860)
 
 
