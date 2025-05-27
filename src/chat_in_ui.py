@@ -21,10 +21,15 @@ def respond(selected_bot, history, user_input):
     response = chatbot.chat(user_input)
     end_time = time.time()
 
-    # Append user and assistant responses to the history
-    history.append(
-        (user_input, f"{response} ({round(end_time - start_time, 2)}s)"))
+    # Use OpenAI-style message format
+    history.append({"role": "user", "content": user_input})
+    history.append({
+        "role": "assistant",
+        "content": f"{response} ({round(end_time - start_time, 2)}s)"
+    })
+
     return history, ""
+
 
 
 with gr.Blocks() as demo:
